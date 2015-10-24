@@ -1,0 +1,18 @@
+{
+  "name": "node-series",
+  "version": "0.0.1",
+  "dependencies": {
+    "promise": {
+      "version": "7.0.4",
+      "from": "promise@",
+      "resolved": "https://registry.npmjs.org/promise/-/promise-7.0.4.tgz",
+      "dependencies": {
+        "asap": {
+          "version": "2.0.3",
+          "from": "asap@~2.0.3",
+          "resolved": "https://registry.npmjs.org/asap/-/asap-2.0.3.tgz"
+        }
+      }
+    }
+  }
+}

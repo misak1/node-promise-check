@@ -1,0 +1,26 @@
+{
+  "name": "node-promise-check",
+  "version": "0.0.1",
+  "description": "series loop",
+  "main": "libs/mian.js",
+  "engines": {
+    "node": "~>0.10.x",
+    "npm": ">= 1.4"
+  }
+  , "scripts": {
+      "examples": "node ./examples/index.js",
+      "test": "mocha --ui tdd ./tests/"
+  },
+  "author": "Misaki Shibata <misaki.pink@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/misak1/node-promise-check/issues"
+  },
+  "dependencies": {
+    "promise": "^7.0.4"
+  },
+  "devDependencies": {
+    "should": "^7.1.1",
+    "mocha": "^2.3.3"
+  }
+}
