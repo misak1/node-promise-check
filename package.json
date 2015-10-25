@@ -1,6 +1,6 @@
 {
   "name": "node-promise-check",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Async Promise Jobs End Check.",
   "main": "index.js",
   "engines": {

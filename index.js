@@ -28,8 +28,8 @@ module.exports = new(function() {
     }
     this.exec = function(ary, fnc, cb) {
         status = [];
-        if (ary[0] instanceof Array) {
-            isArray = true
+        if (ary[0] instanceof Array || (typeof ary[0] === 'string')) {
+            isArray = true;
         } else {
             keyName = 'name'
         }
