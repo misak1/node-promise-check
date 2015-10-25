@@ -14,9 +14,10 @@ function getRandomInt(min, max) {
 function fnc(msg) {
     var wait = getRandomInt(1, 20) * 100;
     setTimeout(function(wait, msg) {
-        console.log(wait + "ms", "%%%%% " + msg + " %%%%%");
 
+        console.log(wait + "ms", "%%%%% " + msg + " %%%%%");
         series.doneRegist(msg);
+
         // console.log(series.doneStatus());
         console.log(series.doneCheck());
         if (series.doneCheck() === true) {

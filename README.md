@@ -22,9 +22,10 @@ function getRandomInt(min, max) {
 function fnc(msg) {
     var wait = getRandomInt(1, 20) * 100;
     setTimeout(function(wait, msg) {
+      
         console.log(wait + "ms", "%%%%% " + msg + " %%%%%");
-
         series.doneRegist(msg);
+
         // console.log(series.doneStatus());
         console.log(series.doneCheck());
         if (series.doneCheck() === true) {
@@ -54,36 +55,30 @@ series.exec(list, fnc, function() {
 
 
 ---------
-./example-01.js
+./example-03.js
 ---------
-[ 'smartphone-portrait': false,
-  'smartphone-landscape': false,
-  'tablet-portrait': false,
-  'tablet-landscape': false,
-  'desktop-standard': false ]
+[ a: false, b: false, c: false, d: false, e: false, f: false ]
 start Queue
-200ms %%%%% desktop-standard %%%%%
+600ms %%%%% b %%%%%
 false
-600ms %%%%% tablet-portrait %%%%%
+600ms %%%%% f %%%%%
 false
-1000ms %%%%% smartphone-landscape %%%%%
+800ms %%%%% c %%%%%
 false
-1200ms %%%%% smartphone-portrait %%%%%
+1400ms %%%%% d %%%%%
 false
-1400ms %%%%% tablet-landscape %%%%%
+1500ms %%%%% e %%%%%
+false
+2000ms %%%%% a %%%%%
 true
 end Queue
-\
-
 
 ```
 
 
 ## ライセンス - License
-
 MIT License
 
 
 ## 作者 - Author
-
 - (C)Misaki Shibata <misaki.pink@gmail.com>
