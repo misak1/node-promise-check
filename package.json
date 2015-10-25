@@ -1,6 +1,6 @@
 {
   "name": "node-promise-check",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "series loop",
   "main": "libs/mian.js",
   "engines": {
