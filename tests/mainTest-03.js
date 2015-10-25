@@ -1,5 +1,5 @@
 var assert = require('assert');
-var series3 = require('../libs/main.js');
+var series = require('../index.js');
 
 // 1次元配列
 var list = ["a", "b", "c", "d", "e", "f"];
@@ -13,28 +13,28 @@ function fnc(msg) {
     setTimeout(function(wait, msg) {
         console.log(wait + "ms", "%%%%% " + msg + " %%%%%");
 
-        series3.doneRegist(msg);
-        console.log(series3.doneCheck());
-        if (series3.doneCheck() === true) {
+        series.doneRegist(msg);
+        console.log(series.doneCheck());
+        if (series.doneCheck() === true) {
             console.log("end Queue");
             test('end Queue', function() {
-                assert.equal(series3.doneCheck(), true);
+                assert.equal(series.doneCheck(), true);
             });
         }
     }, wait, wait, msg);
 }
 
-suite('node-series3', function() {
+suite('node-series', function() {
 
-    series3.exec(list, fnc, function() {
+    series.exec(list, fnc, function() {
         console.log("start Queue");
     });
     test('初期値確認', function() {
-        assert.equal(series3.doneCheck(), false);
+        assert.equal(series.doneCheck(), false);
     });
     test('doneStatus()size確認', function() {
         var size = 0;
-        var map = series3.doneStatus();
+        var map = series.doneStatus();
         for (var prop in map) {
             size++;
         }
@@ -42,7 +42,7 @@ suite('node-series3', function() {
 
     });
     test('doneStatus()初期値確認', function() {
-        var map = series3.doneStatus();
+        var map = series.doneStatus();
         for (var key in map) {
             assert.equal(map[key], false);
         }

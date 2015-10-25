@@ -1,5 +1,5 @@
 var assert = require('assert');
-var series1 = require('../libs/main.js');
+var series = require('../index.js');
 
 var list = [{
     "name": "smartphone-portrait",
@@ -47,30 +47,30 @@ function fnc(msg) {
     setTimeout(function(wait, msg) {
         console.log(wait + "ms", "%%%%% " + msg + " %%%%%");
 
-        series1.doneRegist(msg);
-        console.log(series1.doneCheck());
-        if (series1.doneCheck() === true) {
+        series.doneRegist(msg);
+        console.log(series.doneCheck());
+        if (series.doneCheck() === true) {
             console.log("end Queue");
             test('end Queue', function() {
-                assert.equal(series1.doneCheck(), true);
+                assert.equal(series.doneCheck(), true);
             });
         }
     }, wait, wait, msg);
 }
 
-suite('node-series1', function() {
+suite('node-series', function() {
 
 // console.log(list);
-    series1.exec(list, fnc, function() {
+    series.exec(list, fnc, function() {
         console.log("start Queue");
 
     });
     test('初期値確認', function() {
-        assert.equal(series1.doneCheck(), false);
+        assert.equal(series.doneCheck(), false);
     });
     test('doneStatus()size確認', function() {
         var size = 0;
-        var map = series1.doneStatus();
+        var map = series.doneStatus();
         for (var prop in map) {
             size++;
         }
@@ -78,7 +78,7 @@ suite('node-series1', function() {
 
     });
     test('doneStatus()初期値確認', function() {
-        var map = series1.doneStatus();
+        var map = series.doneStatus();
         for (var key in map) {
             assert.equal(map[key], false);
         }

@@ -1,4 +1,4 @@
-var series = require('../libs/main.js');
+var series = require('../index.js');
 
 // 2次元配列
 var ary0 = ["a0", "a1", "a2", "a3"];

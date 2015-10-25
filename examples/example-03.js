@@ -1,4 +1,4 @@
-var series = require('../libs/main.js');
+var series = require('../index.js');
 
 // 1次元配列
 var list = ["a", "b", "c", "d", "e", "f"];
@@ -10,7 +10,7 @@ function getRandomInt(min, max) {
 function fnc(msg) {
     var wait = getRandomInt(1, 20) * 100;
     setTimeout(function(wait, msg) {
-      
+
         console.log(wait + "ms", "%%%%% " + msg + " %%%%%");
         series.doneRegist(msg);
 
