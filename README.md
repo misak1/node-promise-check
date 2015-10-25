@@ -5,7 +5,7 @@
 AsyncQueueの完了を受け取れるようにしなります。<br>
 Queueの実行にはPromiseを使っています。
 <div style="background-color:#ffffff; border:1px solid #cccccc;">
-<img src="//raw.githubusercontent.com/misak1/node-promise-check/master/diagram.png" "フローチャート" style="padding:10px">
+<img src="https://raw.githubusercontent.com/misak1/node-promise-check/master/diagram.png" "フローチャート" style="padding:10px">
 </div>
 
 ## インストール - Install
