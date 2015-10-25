@@ -1,17 +1,25 @@
 {
   "name": "node-promise-check",
-  "version": "0.0.3",
-  "description": "series loop",
+  "version": "0.0.4",
+  "description": "Async Promise Jobs End Check.",
   "main": "libs/mian.js",
   "engines": {
     "node": "~>0.10.x",
     "npm": ">= 1.4"
-  }
-  , "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/misak1/node-promise-check.git"
+  },
+  "scripts": {
       "examples": "node ./examples/index.js",
       "test": "mocha --ui tdd ./tests/"
   },
-  "author": "Misaki Shibata <misaki.pink@gmail.com>",
+  "author": {
+    "name": "Misaki Shibata",
+    "email": "misaki.pink@gmail.com",
+    "url": ""
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/misak1/node-promise-check/issues"
