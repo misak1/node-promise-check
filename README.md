@@ -1,6 +1,12 @@
 
 # node-promise-check
-非同期スクリプトの完了を受け取る
+[![Build Status](https://travis-ci.org/misak1/node-series.svg?branch=master)](https://travis-ci.org/misak1/node-series)
+
+AsyncQueueの完了を受け取れるようにしなります。<br>
+Queueの実行にはPromiseを使っています。
+<div style="background-color:#ffffff; border:1px solid #cccccc;">
+<img src="diagram.png" "フローチャート" style="padding:10px">
+</div>
 
 ## インストール - Install
 ```
@@ -22,7 +28,7 @@ function getRandomInt(min, max) {
 function fnc(msg) {
     var wait = getRandomInt(1, 20) * 100;
     setTimeout(function(wait, msg) {
-      
+
         console.log(wait + "ms", "%%%%% " + msg + " %%%%%");
         series.doneRegist(msg);
 
