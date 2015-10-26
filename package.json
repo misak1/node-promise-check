@@ -1,6 +1,6 @@
 {
   "name": "node-promise-check",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Async Promise Jobs End Check.",
   "main": "index.js",
   "engines": {
@@ -30,5 +30,10 @@
   "devDependencies": {
     "should": "^7.1.1",
     "mocha": "^2.3.3"
-  }
+  },
+  "keywords": [
+    "async",
+    "parallel",
+    "queue"
+  ]
 }

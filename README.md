@@ -36,11 +36,13 @@ function fnc(msg) {
         console.log(series.doneCheck());
         if (series.doneCheck() === true) {
             console.log("end Queue");
+            console.timeEnd("example-03");
         }
     }, wait, wait, msg);
 }
 
 series.exec(list, fnc, function() {
+    console.time("example-03");
     console.log("start Queue");
 });
 ```
@@ -65,19 +67,20 @@ series.exec(list, fnc, function() {
 ---------
 [ a: false, b: false, c: false, d: false, e: false, f: false ]
 start Queue
-600ms %%%%% b %%%%%
+900ms %%%%% f %%%%%
 false
-600ms %%%%% f %%%%%
+1000ms %%%%% a %%%%%
 false
-800ms %%%%% c %%%%%
-false
-1400ms %%%%% d %%%%%
+1200ms %%%%% b %%%%%
 false
 1500ms %%%%% e %%%%%
 false
-2000ms %%%%% a %%%%%
+1600ms %%%%% d %%%%%
+false
+1900ms %%%%% c %%%%%
 true
 end Queue
+example-03: 1902ms
 
 ```
 

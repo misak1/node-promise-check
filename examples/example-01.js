@@ -53,10 +53,12 @@ function fnc(msg) {
         console.log(series.doneCheck());
         if (series.doneCheck() === true) {
             console.log("end Queue");
+            console.timeEnd("example-01");
         }
     }, wait, wait, msg);
 }
 
 series.exec(list, fnc, function() {
+    console.time("example-01");
     console.log("start Queue");
 });
