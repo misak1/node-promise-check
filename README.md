@@ -1,6 +1,9 @@
 
 # node-promise-check
-[![Build Status](https://travis-ci.org/misak1/node-series.svg?branch=master)](https://travis-ci.org/misak1/node-series)
+[![Build Status](http://img.shields.io/travis/misak1/node-promise-check/master.svg?style=flat)](https://travis-ci.org/misak1/node-promise-check)
+[![npm total download](https://img.shields.io/npm/dt/node-promise-check.svg?style=flat)](https://www.npmjs.com/package/node-promise-check)
+[![npm version](https://badge.fury.io/js/node-promise-check.svg?style=flat)](https://badge.fury.io/js/node-promise-check)
+[![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](http://ruedap.mit-license.org/2015)
 
 AsyncQueueの完了を受け取れるようにします。<br>
 Queueの実行にはPromiseを使っています。
